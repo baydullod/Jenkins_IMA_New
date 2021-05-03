@@ -1,0 +1,15 @@
+{
+    "builders": [{
+        "type": "amazon-ebs",
+        "region": "us-east-1",
+        "source_ami": "ami-ami-048f6ed62451373d9",
+        "instance_type": "t2.micro",
+        "ami_name": "jenkins-ami {{timestamp}}",
+    }],
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+            "sudo yum update kernel -y"
+        ]
+    }]
+}
