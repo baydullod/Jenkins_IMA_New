@@ -1,0 +1,1 @@
+This is for building AMI for Jenkins
